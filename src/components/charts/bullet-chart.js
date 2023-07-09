@@ -5,12 +5,12 @@ import { Bullet } from '@ant-design/plots';
 const DemoBullet = () => {
   const data = [
     {
-      title: '满意度',
+      title: 'Satisfaction',
       ranges: [100],
       measures: [80],
-      target: 85,
-    },
-  ]; // @TODO 差一张垂直方向的缩略图
+      target: 85
+    }
+  ];
 
   const config = {
     data,
@@ -21,10 +21,10 @@ const DemoBullet = () => {
     color: {
       range: '#f0efff',
       measure: '#5B8FF9',
-      target: '#3D76DD',
+      target: '#3D76DD'
     },
     xAxis: {
-      line: null,
+      line: null
     },
     yAxis: false,
     layout: 'vertical',
@@ -32,9 +32,9 @@ const DemoBullet = () => {
       measure: {
         position: 'middle',
         style: {
-          fill: '#fff',
-        },
-      },
+          fill: '#fff'
+        }
+      }
     },
     // 自定义 legend
     legend: {
@@ -48,9 +48,9 @@ const DemoBullet = () => {
             symbol: 'square',
             style: {
               fill: '#5B8FF9',
-              r: 5,
-            },
-          },
+              r: 5
+            }
+          }
         },
         {
           value: '目标值',
@@ -59,15 +59,18 @@ const DemoBullet = () => {
             symbol: 'line',
             style: {
               stroke: '#3D76DD',
-              r: 5,
-            },
-          },
-        },
-      ],
-    },
+              r: 5
+            }
+          }
+        }
+      ]
+    }
   };
-  return <div style={{ padding: '20px', borderColor: 'coral', borderStyle: 'solid' }}>
-    <Bullet {...config} /> </div>;
+  return (
+    <div style={{ padding: '20px', borderColor: 'coral', borderStyle: 'solid' }}>
+      <Bullet {...config} />{' '}
+    </div>
+  );
 };
 
 export default DemoBullet;

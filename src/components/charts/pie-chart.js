@@ -5,30 +5,31 @@ import { Pie } from '@ant-design/plots';
 const DemoPie = () => {
   const data = [
     {
-      type: '分类一',
-      value: 27,
+      type: 'Category One',
+      value: 27
     },
     {
-      type: '分类二',
-      value: 25,
+      type: 'Category Two',
+      value: 25
     },
     {
-      type: '分类三',
-      value: 18,
+      type: 'Category Three',
+      value: 18
     },
     {
-      type: '分类四',
-      value: 15,
+      type: 'Category Four',
+      value: 15
     },
     {
-      type: '分类五',
-      value: 10,
+      type: 'Category Five',
+      value: 10
     },
     {
-      type: '其他',
-      value: 5,
-    },
+      type: 'Others',
+      value: 5
+    }
   ];
+
   const config = {
     appendPadding: 10,
     data,
@@ -41,17 +42,20 @@ const DemoPie = () => {
       content: ({ percent }) => `${(percent * 100).toFixed(0)}%`,
       style: {
         fontSize: 14,
-        textAlign: 'center',
-      },
+        textAlign: 'center'
+      }
     },
     interactions: [
       {
-        type: 'element-active',
-      },
-    ],
+        type: 'element-active'
+      }
+    ]
   };
-  return <div style={{ padding: '20px', borderColor: 'coral', borderStyle: 'solid' }}>
-    <Pie {...config} /> </div>;
+  return (
+    <div style={{ padding: '20px', borderColor: 'coral', borderStyle: 'solid' }}>
+      <Pie {...config} />{' '}
+    </div>
+  );
 };
 
 export default DemoPie;
